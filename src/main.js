@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import {Header,Swipe,SwipeItem} from 'mint-ui'
+import {Header,Swipe,SwipeItem,Button} from 'mint-ui'
 Vue.component (Header.name, Header)
 Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
+Vue.component (SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button);
 
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
@@ -12,6 +13,15 @@ import router from './router.js'
 
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+
+import moment from 'moment'
+
+Vue.filter('dateFormat',function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+	return moment(dataStr).format(pattern)
+})
+
+
+Vue.http.options.root = 'http://liulongbin.top:3005'
 
 
 
