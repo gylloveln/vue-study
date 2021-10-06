@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3>SearchContainer</h3>
+		<h3>搜索组件</h3>	
 	</div>
 </template>
 
@@ -11,5 +11,4 @@
 
 <style lang="scss" scoped>
 	
-
 </style>

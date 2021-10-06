@@ -10,7 +10,7 @@
 
         <div class="content" v-html="newsinfo.content"></div>
 
-        <comment-box></comment-box>
+        <comment-box :id="this.id"></comment-box>
     </div>
 </template>
 <script>
